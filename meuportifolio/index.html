@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio Albert</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="projetos.css">
+    <link rel="stylesheet" href="habilidades.css">
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="menu">
+        <nav class="nav-menu">
+            <ul class="lista-menu">
+                <li class="item-lista">
+                    <a href="#perfil">Perfil
+                        <i class="fa-solid fa-pills" id="icon1"></i>
+                    </a>
+                </li>
+                <li class="item-lista">
+                    <a href="#habilidades"> Habilidades
+                        <i class="fa-solid fa-pills" id="icon2"></i>
+                    </a>
+                </li>
+                <li class="item-lista">
+                    <a href="#projetos">Projetos
+                        <i class="fa-solid fa-pills" id="icon3"></i>
+                    </a>
+                </li>
+            
+            </ul>
+        </nav>
+        <nav class="nav-menu-mobile">
+          <ul class="lista-menu-mobile">
+            <li class="item-lista-mobile">
+              <a href="#perfil">Perfil
+                  <i class="fa-solid fa-pills" id="icon1"></i>
+              </a>
+          </li>
+          <li class="item-lista-mobile">
+              <a href="#habilidades"> Habilidades
+                  <i class="fa-solid fa-pills" id="icon2"></i>
+              </a>
+          </li>
+          <li class="item-lista-mobile">
+              <a href="#projetos">Projetos
+                  <i class="fa-solid fa-pills" id="icon3"></i>
+              </a>
+          </li>
+          </ul>
+        </nav>
+    </header>
+    <canvas id="matrix"></canvas>
+    <section class="sessao-perfil" id="perfil">
+        <h1>PERFIL</h1>
+        <div class="perfil">
+            <img src="imagens/me.jpg" alt="">
+            <div><p>Alberto</p></div>           
+        </div>
+        <div class="box-perfil">
+            <div class="descricao-perfil">
+                <p>Sou um grande entusiasta da TI e aprecio muito a tecnologia e inovação, com algumas experiências básicas em programação e desenvolvimento web. Busco sempre aplicar boas práticas de desenvolvimento e melhorar a experiência do usuário por meio de soluções eficientes e criativas. Atualmente, trabalho com suporte técnico em uma empresa de tecnologia chamada Unisys.Meu objetivo profissional é continuar a evoluir como desenvolvedor, aprender novas tecnologias,técnicas, aperfeiçoar a soft skills e contribuir para o desenvolvimento de soluções inovadoras que atendam às necessidades dos usuários e empresas.</p>
+            </div>
+        </div>
+    </section>
+    <section id="habilidades">
+     
+        <div class="sessao-habilidades">
+            <canvas id="matrix"></canvas>
+            <h1>Habilidades</h1>
+            <div class="lista-habilidades">
+                <div class="hab">
+                    <div class="hab-inner">
+                      <div class="hab-front">
+                        <img src="imagens/html.jpg" alt="Imagem do Card" />
+                      </div>
+                      <div class="hab-back">
+                        <p> Desenvolvimento básico de interatividade e funcionalidades dinâmicas em websites. Experiência com bibliotecas e frameworks  para construção de interfaces ricas.</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="hab">
+                    <div class="hab-inner">
+                      <div class="hab-front">
+                        <img src="imagens/css.png" alt="Imagem do Card" />
+                      </div>
+                      <div class="hab-back">
+                        <p>Tenho experiência em usar CSS para construir layouts responsivos, que se adaptam a diferentes tamanhos de tela, garantindo que os sites funcionem perfeitamente em dispositivos móveis, tablets e desktops.</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="hab">
+                    <div class="hab-inner">
+                      <div class="hab-front">
+                        <img src="imagens/jscript.jpg" alt="Imagem do Card" />
+                      </div>
+                      <div class="hab-back">
+                        <p>Possuo experiência básica em java script para criação de interfaces interativas como formulários, botões e sliders.</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="hab">
+                    <div class="hab-inner">
+                      <div class="hab-front">
+                        <img src="imagens/pythonn.png" alt="Imagem do Card" />
+                      </div>
+                      <div class="hab-back">
+                        <p>Possuo experiência em python e domino habilidades básicas em banco de dados MySQL e Sistema de Previsão de Vendas (Machine Learning)</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projetos">
+        <h1>Projetos Desenvolvidos</h1>
+        <div class="area-card">
+            <div class="card">
+                <div class="card-inner">
+                  <div class="card-front">
+                    <img src="imagens/projeto.pi.png" alt="Imagem do Card" />
+                  </div>
+                  <div class="card-back">
+                    <p> O projeto APOLA está sendo desenvolvido em sala de aula juntamente com meus colegas de grupo com ajuda frequente dos professores, onde o desafio é criar um site de artesanato.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <footer>
+      <div class="footer-itens">
+        <span class="copyright">
+          &copy;2024 Alberto júnior
+        </span>
+      </div>
+    </footer>
+</body>
+</html>

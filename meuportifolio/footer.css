@@ -1,0 +1,16 @@
+footer{
+    background-color: black;
+    border-top: 4px solid white;
+    height: 90px;
+}
+.footer-itens{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.copyright{
+    color: white;
+    font-size: 18px;
+    margin-left: 10px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Rain</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            /* background-color: black; */
+            overflow: hidden;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+
+    <script>
+        // Definir variáveis
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+
+        // Ajustar o tamanho do canvas para preencher a tela inteira
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Caracteres para a animação
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()_+';
+        const characterArray = characters.split('');
+
+        // Tamanho da fonte e quantidade de colunas
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+
+        // Array para armazenar as posições das "gotas"
+        const drops = Array(columns).fill(0); // Inicializa todas as gotas na posição 0
+
+        // Função para desenhar o efeito
+        function draw() {
+            // Preencher o fundo com transparência para criar o efeito de desvanecimento
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'; // Cor preta com transparência
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Definir estilo da fonte (verde, como no Matrix)
+            ctx.fillStyle = '#0F0'; // Cor verde
+            ctx.font = fontSize + 'px monospace';
+
+            // Desenhar as gotas de código
+            for (let i = 0; i < drops.length; i++) {
+                const text = characterArray[Math.floor(Math.random() * characterArray.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                // Reiniciar a posição das gotas quando saem da tela
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+
+                // Atualizar a posição da gota
+                drops[i]++;
+            }
+        }
+
+        // Chamar a função de desenho a cada 35 milissegundos
+        setInterval(draw, 35);
+    </script>
+</body>
+</html>
